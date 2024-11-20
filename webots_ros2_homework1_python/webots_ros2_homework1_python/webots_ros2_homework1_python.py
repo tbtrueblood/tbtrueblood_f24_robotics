@@ -11,6 +11,7 @@ class TurtleBotController(Node):
         super().__init__('turtlebot_controller')
         self.publisher_ = self.create_publisher(Twist, 'cmd_vel', 10)
         self.cmd = Twist()
+        self.odometry_ready = False
 
         # Subscribe to odometry to track robot's position
         self.create_subscription(Odometry, '/odom', self.update_odometry, 10)
