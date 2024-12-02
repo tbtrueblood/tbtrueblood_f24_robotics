@@ -64,7 +64,7 @@ class TurtleBotController(Node):
         step_distance = 1.0
         for i in range(4):
             self.move_straight(0.1, step_distance)
-            self.rotate(0.3, math.radians(90))
+            self.rotate(1.0, math.radians(90))
             step_distance += 0.5
 
     def shutdown(self):
